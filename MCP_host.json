@@ -1,0 +1,10 @@
+{
+  "recipient_name": "{{Sheet Column Name}}",
+  "recipient_email": "{{Sheet Column Email}}",
+  "company_name": "{{Sheet Column Company}}",
+  "role": "{{Sheet Column Role}}",
+  "extra": {
+    "campus": "{{Sheet Campus}}",
+    "batch": "{{Sheet Batch}}"
+  }
+}
