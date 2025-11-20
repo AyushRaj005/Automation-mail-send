@@ -1,6 +1,6 @@
 *Automation-Mail-Send*
 
-** Email Automation using Python, Google Scripts & No-Code Tools**
+**Email Automation using Python, Google Scripts & No-Code Tools**
 
 This repository contains multiple approaches to automate sending emails — from simple Python scripts to advanced workflows using Google Apps Script, Zapier, and HTML-styled emails. Each method is documented with its advantages, limitations, and implementation procedure so users can choose the best technique for their needs.
 
@@ -60,7 +60,7 @@ This method combines **Claude AI**, **Zapier**, and a custom-built **MCP (Mail C
 5. Zapier/Gmail sends the email OR MCP triggers the send itself.
 
 
-##**MCP Server (Mail Control Processor)**
+## **MCP Server (Mail Control Processor)**
 
 The MCP server is a lightweight backend that handles:
 
@@ -75,7 +75,6 @@ The MCP server is a lightweight backend that handles:
 
 This ensures the entire pipeline is **reliable**, **async**, and perfectly scalable.
 
----
 
 ##**Sample Claude Prompt Used by MCP**
 
@@ -126,7 +125,7 @@ Remaining → full HTML email body.
 * Scalable for **hundreds or thousands** of emails
 * No need for local Python execution — everything runs in cloud
 
-##**Limitations**
+## **Limitations**
 
 * Requires server deployment (Render, Railway, EC2, etc.)
 * Claude API usage is billable
@@ -134,7 +133,7 @@ Remaining → full HTML email body.
 * MCP must be secured with API keys/HTTPS
 * Setup complexity is higher than basic Python scripts
 
-##**MCP Server Code (Short Version)**
+## **MCP Server Code (Short Version)**
 
 The full MCP server (FastAPI + Queue + Claude API) is available in this repo.
 Here is a **minimal example** of the `/generate_email` endpoint:
