@@ -1,6 +1,6 @@
 *Automation-Mail-Send*
 
-**📧 Email Automation using Python, Google Scripts & No-Code Tools**
+** Email Automation using Python, Google Scripts & No-Code Tools**
 
 This repository contains multiple approaches to automate sending emails — from simple Python scripts to advanced workflows using Google Apps Script, Zapier, and HTML-styled emails. Each method is documented with its advantages, limitations, and implementation procedure so users can choose the best technique for their needs.
 
@@ -46,7 +46,7 @@ Add all emails in **BCC** and send one message.
 This method combines **Claude AI**, **Zapier**, and a custom-built **MCP (Mail Control Processor) Server** to fully automate personalized email generation and sending. This approach is ideal if you want AI-generated emails, structured workflows, and a scalable system for large outreach campaigns.
 
 
-## ⚙️ **How It Works**
+## **How It Works**
 
 1. You maintain recipient data in **Google Sheets**.
 2. **Zapier** detects a new row (or scheduled batch).
@@ -60,7 +60,7 @@ This method combines **Claude AI**, **Zapier**, and a custom-built **MCP (Mail C
 5. Zapier/Gmail sends the email OR MCP triggers the send itself.
 
 
-## 🧠 **MCP Server (Mail Control Processor)**
+##**MCP Server (Mail Control Processor)**
 
 The MCP server is a lightweight backend that handles:
 
@@ -77,7 +77,7 @@ This ensures the entire pipeline is **reliable**, **async**, and perfectly scala
 
 ---
 
-## 📝 **Sample Claude Prompt Used by MCP**
+##**Sample Claude Prompt Used by MCP**
 
 ```txt
 Generate a professional email inviting the recruiter to campus placements.
@@ -89,7 +89,7 @@ Remaining → full HTML email body.
 
 ---
 
-## 🔌 **Zapier Setup**
+## **Zapier Setup**
 
 ### **Trigger**
 
@@ -117,7 +117,7 @@ Remaining → full HTML email body.
 * Gmail → Send Email
 * Use MCP-generated subject + HTML body (via `/status/{job_id}` polling or webhook).
 
-## 📌 **Advantages**
+## **Advantages**
 
 * Fully automated personalized email generation
 * Supports HTML templates
@@ -126,9 +126,7 @@ Remaining → full HTML email body.
 * Scalable for **hundreds or thousands** of emails
 * No need for local Python execution — everything runs in cloud
 
----
-
-## ❌ **Limitations**
+##**Limitations**
 
 * Requires server deployment (Render, Railway, EC2, etc.)
 * Claude API usage is billable
@@ -136,9 +134,7 @@ Remaining → full HTML email body.
 * MCP must be secured with API keys/HTTPS
 * Setup complexity is higher than basic Python scripts
 
----
-
-## 🧾 **MCP Server Code (Short Version)**
+##**MCP Server Code (Short Version)**
 
 The full MCP server (FastAPI + Queue + Claude API) is available in this repo.
 Here is a **minimal example** of the `/generate_email` endpoint:
@@ -158,7 +154,7 @@ uvicorn mcp_server:app --host 0.0.0.0 --port 8000
 
 ---
 
-## 🚀 Why Use This Method?
+## Why Use This Method?
 
 If you want **AI-level personalization**, **automated sending**, and **enterprise-grade scaling**, this method is the best.
 You can:
